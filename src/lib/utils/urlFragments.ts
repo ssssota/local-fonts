@@ -13,7 +13,6 @@ export const urlFragments = (
     clone = clone.slice(index + url.length);
   }
   notUrls.push(clone);
-  console.log(notUrls, urls);
 
   return Array.from({ length: 2 * (urls?.length ?? 0) + 1 }, (_, i) => {
     const index = Math.floor(i / 2);
