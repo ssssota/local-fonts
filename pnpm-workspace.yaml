@@ -1,0 +1,4 @@
+workspaces:
+  - '.'
+  - ttf-parser-wasm
+  - ttf-parser-wasm/pkg
