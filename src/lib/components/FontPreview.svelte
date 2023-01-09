@@ -47,9 +47,11 @@
 
 <style>
   button {
-    background-color: transparent;
+    --button-base: transparent;
+    --button-hover: rgba(0 0 0 / 0.1);
     display: block;
     text-align: start;
+    width: 100%;
   }
   p {
     font-size: 1.5em;
