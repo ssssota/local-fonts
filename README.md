@@ -1,38 +1,44 @@
-# create-svelte
+# local-fonts
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+https://local-fonts.ssssota.dev
 
-## Creating a project
+Preview fonts installed on your computer. (via [Local Font Access API](https://developer.mozilla.org/docs/Web/API/Local_Font_Access_API))
 
-If you're seeing this, you've probably already done this step. Congrats!
+You can also view font information. (via [ttf-parser](https://github.com/RazrFalcon/ttf-parser) + WASM)
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## Screenshots
 
-# create a new project in my-app
-npm create svelte@latest my-app
+|Preview and search|View font details|
+|---|---|
+|![Preview](https://user-images.githubusercontent.com/15074382/211305227-a1b1d278-299b-4f2f-8fb2-8eead8b0f996.png)|![local-fonts ssssota dev_ (1)](https://user-images.githubusercontent.com/15074382/211305399-64859a79-7587-403d-b20e-fd22d6439ad5.png)|
+
+## Development
+
+### Requirements
+
+- [Node.js](https://nodejs.org/) v16↑
+- [rustup](https://www.rust-lang.org/tools/install) (Rust, Cargo)
+- [wasm-pack](https://rustwasm.github.io/wasm-pack/)
+
+### Setup
+
+```sh
+git clone https://github.com/ssssota/local-fonts.git
+cd local-fonts
+corepack enable
+pnpm install
 ```
 
-## Developing
+### Development
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+```sh
+pnpm wasm
+pnpm dev
 ```
 
-## Building
+### Build
 
-To create a production version of your app:
-
-```bash
-npm run build
+```sh
+pnpm wasm
+pnpm build
 ```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
